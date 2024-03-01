@@ -1,0 +1,105 @@
+{
+	"info": {
+		"_postman_id": "80b3d4fc-a63d-457f-8fae-6527ea99b51a",
+		"name": "Autotrader",
+		"description": "A set of request that test the Autotrader assignment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Greetings Micro Service",
+			"item": [
+				{
+					"name": "GET - Standard Greeting",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/greetings/hello",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"greetings",
+								"hello"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET - 404 Test",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/greetings/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"greetings",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST - Create Personalized Greeting",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "Mike"
+						},
+						"url": {
+							"raw": "http://localhost:8080/greetings/hello",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"greetings",
+								"hello"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST - 404 Test",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "Hey Jude!"
+						},
+						"url": {
+							"raw": "http://localhost:8080/greetings/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"greetings",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

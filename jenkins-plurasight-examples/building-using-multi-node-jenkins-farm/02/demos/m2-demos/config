@@ -1,0 +1,7 @@
+Host git-codecommit.*.amazonaws.com
+  User APKATPLNME26IS22PR4E
+  IdentityFile ~/.ssh/aws/iam/jenkins1_iam_rsa
+
+Host ec2-3-88-31-207.compute-1.amazonaws.com
+  User ec2-user
+  IdentityFile ~/.ssh/aws/iam/jenkins1_iam_rsa

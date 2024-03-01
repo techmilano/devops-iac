@@ -1,0 +1,194 @@
+{
+	"id": "2539cab6-e84c-4992-92db-8c6306742305",
+	"name": "Autotrader",
+	"allTests": [],
+	"timestamp": "2019-12-03T09:23:18.288Z",
+	"collection_id": "80b3d4fc-a63d-457f-8fae-6527ea99b51a",
+	"folder_id": 0,
+	"target_type": "collection",
+	"environment_id": "0",
+	"data": [],
+	"delay": 0,
+	"count": 1,
+	"collection": {
+		"id": "80b3d4fc-a63d-457f-8fae-6527ea99b51a",
+		"name": "Autotrader",
+		"order": [],
+		"folders_order": [
+			"84201d3b-4c3d-4236-96f5-9befd49a43d6"
+		],
+		"isFavorite": false
+	},
+	"folder": null,
+	"environment": null,
+	"globals": null,
+	"results": [
+		{
+			"name": "GET - Standard Greeting",
+			"id": "ee29a5ff-e73b-4091-bca4-001134c2db3d",
+			"url": "http://localhost:8080/greetings/hello",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				"254"
+			],
+			"allTests": [
+				{}
+			],
+			"time": "254",
+			"totalRequestTime": "254",
+			"iterationResults": {}
+		},
+		{
+			"name": "GET - 404 Test",
+			"id": "f8eba7d2-61a4-4512-a35b-d33a306606aa",
+			"url": "http://localhost:8080/greetings/",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found",
+				"detail": {
+					"name": "Not Found",
+					"detail": "The requested resource could not be found but may be available again in the future. Subsequent requests by the client are permissible."
+				}
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				"61"
+			],
+			"allTests": [
+				{}
+			],
+			"time": "61",
+			"totalRequestTime": "61",
+			"iterationResults": {}
+		},
+		{
+			"name": "POST - Create Personalized Greeting",
+			"id": "c65571e7-2f92-43a3-bbf4-c61410530d9e",
+			"url": "http://localhost:8080/greetings/hello",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 201,
+				"name": "Created",
+				"detail": {
+					"name": "Created",
+					"detail": "The request has been fulfilled and resulted in a new resource being created."
+				}
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				"24"
+			],
+			"allTests": [
+				{}
+			],
+			"time": "24",
+			"totalRequestTime": "24",
+			"iterationResults": {}
+		},
+		{
+			"name": "POST - 404 Test",
+			"id": "0ce146e7-e9ed-4679-a051-3f21b78c28fd",
+			"url": "http://localhost:8080/greetings/",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found",
+				"detail": {
+					"name": "Not Found",
+					"detail": "The requested resource could not be found but may be available again in the future. Subsequent requests by the client are permissible."
+				}
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				"16"
+			],
+			"allTests": [
+				{}
+			],
+			"time": "16",
+			"totalRequestTime": "16",
+			"iterationResults": {}
+		}
+	],
+	"totalPass": 0,
+	"totalFail": 0,
+	"totalTime": 355,
+	"lifecycle": "done",
+	"requests": [
+		{
+			"name": "GET - Standard Greeting",
+			"id": "ee29a5ff-e73b-4091-bca4-001134c2db3d",
+			"url": "http://localhost:8080/greetings/hello",
+			"time": "2019-12-03T09:23:18.288Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {}
+		},
+		{
+			"name": "GET - 404 Test",
+			"id": "f8eba7d2-61a4-4512-a35b-d33a306606aa",
+			"url": "http://localhost:8080/greetings/",
+			"time": "2019-12-03T09:23:18.288Z",
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found",
+				"detail": {
+					"name": "Not Found",
+					"detail": "The requested resource could not be found but may be available again in the future. Subsequent requests by the client are permissible."
+				}
+			},
+			"testPassFailCounts": {}
+		},
+		{
+			"name": "POST - Create Personalized Greeting",
+			"id": "c65571e7-2f92-43a3-bbf4-c61410530d9e",
+			"url": "http://localhost:8080/greetings/hello",
+			"time": "2019-12-03T09:23:18.288Z",
+			"responseCode": {
+				"code": 201,
+				"name": "Created",
+				"detail": {
+					"name": "Created",
+					"detail": "The request has been fulfilled and resulted in a new resource being created."
+				}
+			},
+			"testPassFailCounts": {}
+		},
+		{
+			"name": "POST - 404 Test",
+			"id": "0ce146e7-e9ed-4679-a051-3f21b78c28fd",
+			"url": "http://localhost:8080/greetings/",
+			"time": "2019-12-03T09:23:18.288Z",
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found",
+				"detail": {
+					"name": "Not Found",
+					"detail": "The requested resource could not be found but may be available again in the future. Subsequent requests by the client are permissible."
+				}
+			},
+			"testPassFailCounts": {}
+		}
+	],
+	"synced": false
+}

@@ -1,0 +1,50 @@
+[jenkins]
+deployment = 'EC2'
+jobs = '''
+- Create ECR
+- Delete ECR
+- Push Docker Image to ECR
+- Build Docker Image
+- CodeCommit Demo - the integration between Jenkins, Code Commit, and ECR
+    - Trigger to Poll SCM every 5 min
+'''
+ec2-instance-ami = 'ami-00068cd7555f543d5'
+plugins = '''
+- CloudBees AWS Credentials Plugin
+- Amazon Web Services SDK
+'''
+
+
+[ecs_vpc]
+quick_resource_list = '''
+- VPC
+- subnets
+- ALB
+- NACLs
+'''
+
+
+[codecommit_user]
+uid = 'ccgit'
+policy = 'AWSCodeCommitFullAccess'
+tags = '''
+- owner: George Smith
+- purpose: Repo Access
+'''
+
+
+[docker]
+pull_tomcat_base_image = 'docker pull 8.5.47-jdk8-openjdk'
+build_image = 'docker build -t ecr-test-repo --file Dockerfile .'
+start_container = 'docker run --name ecr-test -p 8090:8080 -d <image_hash_id>'
+start_container_with_auto_remove_on_shell_exit = 'docker run --rm --name ecr-test -p 8090:8080 -d <image_hash_id>'
+attach_shell_to_running_container = 'docker exec -it 8127244519b5 /bin/bash'
+
+
+[dockerfile_commands]
+start = '''
+For running Spring Boot apps as standalone:
+    CMD ["/usr/bin/java", "-jar", "-Dspring.profiles.active=default", "/usr/local/tomcat/webapps/greetings.war"]
+    ENTRYPOINT ["sh", "-c", "java -Djava.security.egd=file:/dev/./urandom -jar /usr/local/tomcat/webapps/greetings.war"]
+'''
+

@@ -1,0 +1,25 @@
+// Sample pipeline
+pipeline {
+    agent any
+
+    stages{
+        stage('Stage 1'){
+            steps{
+                // Reusing our previous jobs but this time executing them in parallel
+                // as part of this pipeline
+                parallel(
+                    task1: {
+                        build job: 'Sample Micro Service Build'
+                    },
+                    task2: {
+                        build job: 'Sample Micro Service Build 2'
+                    },
+                    task3: {
+                        build job: 'Sample Micro Service Build 2'
+                    },
+                    failFast: true // Do not continue building if any of the (steps) jobs fail
+                )
+            }
+        }
+    }
+}
